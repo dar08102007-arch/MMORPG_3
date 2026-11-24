@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{94FBB99A-54AD-4BE8-9E28-A35C9EE51752}</ProjectGuid>
+    <RootNamespace>MMORPG</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <WarningLevel>Level4</WarningLevel>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <ExceptionHandling>Sync</ExceptionHandling>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)' == 'Release'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="ArcherFactory.cpp" />
+    <ClCompile Include="Armor.cpp" />
+    <ClCompile Include="Attack.cpp" />
+    <ClCompile Include="Base.cpp" />
+    <ClCompile Include="CavalryFactory.cpp" />
+    <ClCompile Include="ElfArcher.cpp" />
+    <ClCompile Include="FlyingFactory.cpp" />
+    <ClCompile Include="GameController.cpp" />
+    <ClCompile Include="GameFacade.cpp" />
+    <ClCompile Include="GameField.cpp" />
+    <ClCompile Include="GondorSoldier.cpp" />
+    <ClCompile Include="Handler.cpp" />
+    <ClCompile Include="Health.cpp" />
+    <ClCompile Include="InfantryFactory.cpp" />
+    <ClCompile Include="MageFactory.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="NeutralObject.cpp" />
+    <ClCompile Include="OrcArcher.cpp" />
+    <ClCompile Include="RohanRider.cpp" />
+    <ClCompile Include="Terrain.cpp" />
+    <ClCompile Include="Unit.cpp" />
+    <ClCompile Include="UnitTypeInfo.cpp" />
+    <ClCompile Include="UrukHai.cpp" />
+    <ClCompile Include="WargRider.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Archer.h" />
+    <ClInclude Include="ArcherFactory.h" />
+    <ClInclude Include="Armor.h" />
+    <ClInclude Include="Attack.h" />
+    <ClInclude Include="Base.h" />
+    <ClInclude Include="Cavalry.h" />
+    <ClInclude Include="CavalryFactory.h" />
+    <ClInclude Include="Command.h" />
+    <ClInclude Include="ElfArcher.h" />
+    <ClInclude Include="FellBeast.h" />
+    <ClInclude Include="FlyingFactory.h" />
+    <ClInclude Include="FlyingUnit.h" />
+    <ClInclude Include="GameController.h" />
+    <ClInclude Include="GameFacade.h" />
+    <ClInclude Include="GameField.h" />
+    <ClInclude Include="GameFieldIterator.h" />
+    <ClInclude Include="Gandalf.h" />
+    <ClInclude Include="GondorSoldier.h" />
+    <ClInclude Include="GreatEagle.h" />
+    <ClInclude Include="Handler.h" />
+    <ClInclude Include="Health.h" />
+    <ClInclude Include="Infantry.h" />
+    <ClInclude Include="InfantryFactory.h" />
+    <ClInclude Include="InteractionStrategy.h" />
+    <ClInclude Include="Mage.h" />
+    <ClInclude Include="MageFactory.h" />
+    <ClInclude Include="NeutralObject.h" />
+    <ClInclude Include="OrcArcher.h" />
+    <ClInclude Include="RohanRider.h" />
+    <ClInclude Include="Saruman.h" />
+    <ClInclude Include="Terrain.h" />
+    <ClInclude Include="Unit.h" />
+    <ClInclude Include="UnitEvent.h" />
+    <ClInclude Include="UnitFactory.h" />
+    <ClInclude Include="UnitKind.h" />
+    <ClInclude Include="UnitTypeInfo.h" />
+    <ClInclude Include="UrukHai.h" />
+    <ClInclude Include="WargRider.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>
